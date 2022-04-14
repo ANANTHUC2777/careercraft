@@ -1,1 +1,1 @@
-# careercraft
+# careercraft-demo purpose
