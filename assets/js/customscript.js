@@ -1,8 +1,8 @@
 /*!
  * CAREERCRAFT CUSTOM SCRIPT
  * 
- *   WRITTEN ON:9 APRIL 2022
- *   VERSION : 1.0
+ *   WRITTEN ON:18 JUNE 2022
+ *   VERSION : 1.0.1
 
 */
 $(function () {
@@ -85,4 +85,18 @@ readless__btns.forEach((currBtn) => {
     currBtn.classList.add("d-none");
     currBtn.parentElement.querySelector(".iconBox-txts__readMore").classList.remove("d-none");
   });
+});
+
+//right click disable
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+//F12 click disable
+$(document).keydown(function (event) {
+  if (event.keyCode == 123) {
+    // Prevent F12
+    return false;
+  } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+    // Prevent Ctrl+Shift+I
+    return false;
+  }
 });
